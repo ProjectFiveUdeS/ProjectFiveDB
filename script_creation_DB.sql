@@ -4,6 +4,8 @@ CREATE TABLE examen
 	nbr_etudiants_prevu INT NOT NULL,
 	nbr_etudiants_presents INT NOT NULL,
 	debut TIME NOT NULL,
+	tiers_temps TIME NOT NULL,
+	tiers_temps_adapte TIME NOT NULL,
 	fin TIME NOT NULL,
 	PRIMARY KEY (id_cours_examen)
 );
@@ -16,16 +18,23 @@ CREATE TABLE etudiant
 	PRIMARY KEY(cip)
 );
 
+CREATE TABLE local
+(
+	numero_local VARCHAR(64) NOT NULL,
+	id_cours_examen VARCHAR(64),
+	PRIMARY KEY (numero_local),
+	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen)
+);
+
 CREATE TABLE place
 (
 	numero_chaise INT NOT NULL,
 	numero_local VARCHAR(64) NOT NULL,
 	cip CHAR(8),
 	presence BOOL,
-	id_cours_examen VARCHAR(64),
-	PRIMARY KEY (numero_chaise, numero_local, id_cours_examen),
+	PRIMARY KEY (numero_chaise, numero_local),
 	FOREIGN KEY (cip) REFERENCES etudiant(cip),
-	FOREIGN KEY (id_cours_examen) REFERENCES examen
+	FOREIGN KEY (numero_local) REFERENCES local(numero_local)
 );
 
 CREATE TABLE sorties
