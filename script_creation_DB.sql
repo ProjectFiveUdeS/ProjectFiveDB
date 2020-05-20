@@ -25,7 +25,7 @@ CREATE TABLE etudiant
 	presence BOOL NOT NULL,
 	id_cours_examen VARCHAR(64),
 	PRIMARY KEY(cip),
-	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen),
+	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen)
 );
 
 CREATE TABLE place
