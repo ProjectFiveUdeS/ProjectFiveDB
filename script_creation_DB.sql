@@ -22,7 +22,7 @@ CREATE TABLE place
 	numero_chaise INT NOT NULL,
 	libre_ou_non BOOL NOT NULL,
 	numero_local VARCHAR(64) NOT NULL,
-	PRIMARY KEY (numero_chaise),
+	PRIMARY KEY (numero_chaise, numero_local),
 	FOREIGN KEY (numero_local) REFERENCES local(numero_local)
 );
 
