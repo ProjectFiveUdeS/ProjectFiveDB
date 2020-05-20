@@ -13,7 +13,7 @@ CREATE TABLE etudiant
 	cip CHAR(8) NOT NULL,
 	nom VARCHAR(64) NOT NULL,
 	prenom VARCHAR(64) NOT NULL,
-	PRIMARY KEY(cip),
+	PRIMARY KEY(cip)
 );
 
 CREATE TABLE place
@@ -23,7 +23,7 @@ CREATE TABLE place
 	cip CHAR(8),
 	presence BOOL,
 	id_cours_examen VARCHAR(64),
-	PRIMARY KEY (numero_chaise, numero_local),
+	PRIMARY KEY (numero_chaise, numero_local, id_cours_examen),
 	FOREIGN KEY (cip) REFERENCES etudiant(cip),
 	FOREIGN KEY (id_cours_examen) REFERENCES examen
 );
