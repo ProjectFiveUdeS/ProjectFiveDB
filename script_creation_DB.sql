@@ -24,7 +24,8 @@ CREATE TABLE place
 	presence BOOL,
 	id_cours_examen VARCHAR(64),
 	PRIMARY KEY (numero_chaise, numero_local),
-	FOREIGN KEY (cip) REFERENCES etudiant(cip)
+	FOREIGN KEY (cip) REFERENCES etudiant(cip),
+	FOREIGN KEY (id_cours_examen) REFERENCES examen
 );
 
 CREATE TABLE sorties
