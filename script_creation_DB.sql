@@ -20,7 +20,6 @@ CREATE TABLE local
 CREATE TABLE place
 (
 	numero_chaise INT NOT NULL,
-	libre_ou_non BOOL NOT NULL,
 	numero_local VARCHAR(64) NOT NULL,
 	PRIMARY KEY (numero_chaise, numero_local),
 	FOREIGN KEY (numero_local) REFERENCES local(numero_local)
@@ -35,9 +34,10 @@ CREATE TABLE etudiant
 	presence BOOL NOT NULL,
 	id_cours_examen VARCHAR(64),
 	numero_chaise INT NOT NULL,
+	numero_local VARCHAR(64) NOT NULL,
 	PRIMARY KEY(cip),
 	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen),
-	FOREIGN KEY (numero_chaise) REFERENCES place(numero_chaise)
+	FOREIGN KEY (numero_chaise, numero_local) REFERENCES place(numero_chaise, numero_local)
 );
 
 CREATE TABLE sorties
