@@ -8,13 +8,6 @@ CREATE TABLE examen
 	PRIMARY KEY (id_cours_examen)
 );
 
-CREATE TABLE place
-(
-	numero_chaise INT NOT NULL,
-	libre_ou_non BOOL NOT NULL,
-	PRIMARY KEY (numero_chaise)
-);
-
 CREATE TABLE local
 (
 	numero_local VARCHAR(64) NOT NULL,
@@ -23,6 +16,16 @@ CREATE TABLE local
 	PRIMARY KEY (numero_local),
 	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen)
 );
+
+CREATE TABLE place
+(
+	numero_chaise INT NOT NULL,
+	libre_ou_non BOOL NOT NULL,
+	numero_local VARCHAR(64) NOT NULL,
+	PRIMARY KEY (numero_chaise),
+	FOREIGN KEY (numero_local) REFERENCES local(numero_local)
+);
+
 
 CREATE TABLE etudiant
 (
