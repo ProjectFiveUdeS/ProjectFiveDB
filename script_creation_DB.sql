@@ -13,7 +13,7 @@ CREATE TABLE etudiant
 	cip CHAR(8) NOT NULL,
 	nom VARCHAR(64) NOT NULL,
 	prenom VARCHAR(64) NOT NULL,
-	PRIMARY KEY(cip),
+	PRIMARY KEY(cip)
 );
 
 CREATE TABLE place
