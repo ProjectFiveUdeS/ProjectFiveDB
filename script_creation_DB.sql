@@ -7,6 +7,7 @@ CREATE TABLE examen
 	tiers_temps TIME NOT NULL,
 	tiers_temps_adapte TIME NOT NULL,
 	fin TIME NOT NULL,
+	date_examen DATE NOT NULL,
 	PRIMARY KEY (id_cours_examen)
 );
 
