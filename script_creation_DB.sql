@@ -17,8 +17,6 @@ CREATE TABLE etudiant
 	nom VARCHAR(64) NOT NULL,
 	prenom VARCHAR(64) NOT NULL,
 	PRIMARY KEY(cip)
-<<<<<<< HEAD
-=======
 );
 
 CREATE TABLE local
@@ -28,7 +26,6 @@ CREATE TABLE local
 	description_local VARCHAR(64),
 	PRIMARY KEY (numero_local),
 	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen)
->>>>>>> 2d19f20208935a6e7d55cde1e0cad881273910dc
 );
 
 CREATE TABLE place
