@@ -14,7 +14,6 @@ CREATE TABLE etudiant
 	nom VARCHAR(64) NOT NULL,
 	prenom VARCHAR(64) NOT NULL,
 	PRIMARY KEY(cip),
-	FOREIGN KEY (id_cours_examen) REFERENCES examen(id_cours_examen)
 );
 
 CREATE TABLE place
