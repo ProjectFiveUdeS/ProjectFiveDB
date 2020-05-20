@@ -49,12 +49,3 @@ CREATE TABLE sorties
 	PRIMARY KEY (id_sortie),
 	FOREIGN KEY (cip) REFERENCES etudiant(cip)
 );
-
-CREATE TABLE constitue_de
-(
-	numero_local CHAR(64) NOT NULL,
-	numero_chaise INT NOT NULL,
-	PRIMARY KEY (numero_local, numero_chaise),
-	FOREIGN KEY (numero_local) REFERENCES local(numero_local),
-	FOREIGN KEY (numero_chaise) REFERENCES place(numero_chaise)
-);
