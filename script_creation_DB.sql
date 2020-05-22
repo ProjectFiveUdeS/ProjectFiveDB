@@ -4,10 +4,11 @@ CREATE TABLE examen
 	nbr_etudiants_prevu INT NOT NULL,
 	nbr_etudiants_presents INT NOT NULL,
 	debut TIME NOT NULL,
+	debut_adapte TIME, 
 	tiers_temps TIME NOT NULL,
-	tiers_temps_adapte TIME NOT NULL,
+	tiers_temps_adapte TIME,
 	fin TIME NOT NULL,
-	fin_adapte TIME NOT NULL,
+	fin_adapte TIME,
 	date_examen DATE NOT NULL,
 	PRIMARY KEY (id_cours_examen)
 );
