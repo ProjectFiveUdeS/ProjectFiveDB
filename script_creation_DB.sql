@@ -53,6 +53,7 @@ CREATE TABLE sorties
     heure_debut TIME NOT NULL,
     heure_fin TIME NOT NULL,
     cip CHAR(8) NOT NULL,
+    type_sortie INT NOT NULL,
     PRIMARY KEY (id_sortie),
     FOREIGN KEY (cip) REFERENCES etudiant(cip)
 );
