@@ -42,7 +42,7 @@ CREATE TABLE assis_a
 	cip CHAR(8) NOT NULL,
 	presence BOOL NOT NULL,
 	numero_chaise INT NOT NULL,
-	numero_local INT NOT NULL,
+	numero_local VARCHAR(64) NOT NULL,
 	id_cours_examen VARCHAR(64) NOT NULL,
 	PRIMARY KEY (cip, id_cours_examen),
 	FOREIGN KEY (cip) REFERENCES etudiant(cip),
