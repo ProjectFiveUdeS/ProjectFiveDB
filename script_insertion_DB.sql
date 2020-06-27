@@ -39,6 +39,3 @@ INSERT INTO assis_a
 VALUES ('girm1235', TRUE, 65, 'C1-5001', 'gif420');
 INSERT INTO assis_a
 VALUES ('allf2345', FALSE, 78, 'C1-5001', 'gif420');
-
-INSERT INTO sorties
-VALUES (1, 54, '12:32:00', '12:34:00', 'girm1235');
